@@ -1,36 +1,76 @@
-<html>
-	<head>
-		<title>Blog Bank</title>
-	</head>
-	<body>
-		<div class = "container">
-			<div id="header">
-				<div id="logo">
-					blog<span style="color:green">Bank</span>
+<div class="column">
+	<% @posts.each do |post| %>
+		<div class="post_preview">
+			<div class="content">
+				<ul>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">X</a></li>
+				</uL>
+				<div class="title">
+					<%= post.title %>
 				</div>
-				<div id="dropdown">
-					<select name="dropdown">
-						<option>Sports</option>
-						<option>Cooking</options>
-						<option>Relationships</option>
-						<option>Art</option>
-						<option>Entertainment</option>
-					</select>
+				<div class="date">
+					<%= post.created_at %>
 				</div>
-				<div class="navbar">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Blogs</a></li>
-						<li><a href="#">Member Center</a></li>
-					</ul>
-				</div>
-				<div id="searchbar">
-					<input type="text" placeholder="Search all blogs..."><button type="submit">Go!</button>
+				<div class="body">
+					<%= post.body %>
 				</div>
 			</div>
-			<div id="landing_page">
+			<div class="revenue">
+				$4.95
 			</div>
 		</div>
-	</body>
-</html>
+	<% end %>
+</div>
+
+
+<div class="column">
+	<% @posts.each do |post| %>
+		<div class="post_preview">
+			<div class="content">
+				<ul>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">X</a></li>
+				</uL>
+				<div class="title">
+					<%= post.title %>
+				</div>
+				<div class="date">
+					<%= post.created_at %>
+				</div>
+				<div class="body">
+					<%= post.body %>
+				</div>
+			</div>
+			<div class="revenue">
+				$4.95
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<div class="column">
+	<% @posts.each do |post| %>
+		<div class="post_preview">
+			<div class="content">
+				<ul>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">X</a></li>
+				</uL>
+				<div class="title">
+					<%= post.title %>
+				</div>
+				<div class="date">
+					<%= post.created_at %>
+				</div>
+				<div class="body">
+					<%= post.body %>
+				</div>
+			</div>
+			<div class="revenue">
+				$4.95
+			</div>
+		</div>
+	<% end %>
+</div>
+

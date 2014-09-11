@@ -1,0 +1,56 @@
+.post_preview {
+	height:100px;
+	margin:auto;
+	width:85%;
+	padding:10px;
+	border-radius:5px;
+	margin-top:20px;
+	background-color:#e8e8e8;
+	position:relative;
+}
+
+
+.post_preview .content {
+	width:80%;
+}
+
+
+.post_preview .title {
+	color:Green;
+}
+
+.post_preview .date{
+	font-size:10px;
+}
+
+.post_preview .body {
+	font-size:11px;
+	line-height:20px;
+}
+
+.post_preview ul{
+	position:absolute;
+	right:10px;
+	top:10px;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	background-color:#a0a0a0;
+}
+
+.post_preview ul li {
+	display:inline-block;
+	font-size:11px;
+}
+
+.post_preview ul li a {
+	text-decoration:none;
+}
+
+.post_preview .revenue {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	font-size:12px;
+	color:green;
+}

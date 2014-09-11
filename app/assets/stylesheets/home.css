@@ -1,0 +1,13 @@
+#landing_page {
+	min-height:800px;
+	background-color:#e8e8e8;
+	width:100%;
+}
+
+.column {
+	width:33%;
+	height:100%;
+	overflow:scroll;
+	background-color:#474747;
+	display:inline-block;
+}

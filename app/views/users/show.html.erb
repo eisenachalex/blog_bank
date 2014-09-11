@@ -1,0 +1,36 @@
+<div id="user_nav_bar"> 
+	Welcome back, <%= @user.firstname %>!
+</div>
+<div id="post_side">
+	<%= form_for @post, url: user_posts_path(@user), html:{class: "post_form"} do |f| %>
+		<%= f.text_field :title, placeholder: "Title" %>
+		<%= text_area_tag(:body, "Hi, nice site") %>
+		<%= f.submit "Post"%>
+
+   <% end %>
+</div>
+
+<div id="archive_side">
+	<% @posts.each do |post| %>
+		<div class="post_preview">
+			<div class="content">
+				<ul>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">X</a></li>
+				</ul>
+					<div class="title">
+						<%= post.title %>
+					</div>
+					<div class="date">
+						<%= post.created_at %>
+					</div>
+					<div class="body">
+						<%= post.body %>
+					</div>
+			</div>
+			<div class="revenue">
+				$4.95
+			</div>
+		</div>
+	<% end %>
+</div>

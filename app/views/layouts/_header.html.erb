@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Blog Bank</title>
+	</head>
+	<body>
+		<div class = "container">
+			<div id="header">
+				<div id="logo">
+					blog<span style="color:green">Bank</span>
+				</div>
+				<div id="dropdown">
+					<select name="dropdown">
+						<option>Sports</option>
+						<option>Cooking</options>
+						<option>Relationships</option>
+						<option>Art</option>
+						<option>Entertainment</option>
+					</select>
+				</div>
+				<div class="navbar">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Blogs</a></li>
+						<%if session[:user_id] %>
+							<li><%=link_to "My Account", user_path(@user.id) %></a></li>
+						<% else %>
+							<li><%=link_to "Member Center", new_user_path %></a></li>
+						<% end %>
+					</ul>
+				</div>
+				<div id="searchbar">
+					<input type="text" placeholder="Search all blogs..."><button type="submit">Go!</button>
+				</div>
+			</div>
+			<div id="wrapper">

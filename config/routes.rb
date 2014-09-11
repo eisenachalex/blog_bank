@@ -6,7 +6,7 @@ end
 get '/member_center' => 'users#login'
 get 'sessions/logout' => 'sessions#destroy', as: :logout
 post 'sessions/new' => 'sessions#new', as: :login
-
+post '/filter_posts' => 'posts#filter'
 root to: 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

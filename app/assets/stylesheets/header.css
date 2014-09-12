@@ -1,3 +1,18 @@
 a {
 	color:#474747;
 }
+
+ul.category  {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+ul.category li { display:inline;
+	border-right:1px dotted #474747;
+	padding:0px 10px;
+}
+.category a{
+	color:green;
+	font-weight:bold;
+}

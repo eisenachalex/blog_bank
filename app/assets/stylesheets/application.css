@@ -20,7 +20,6 @@ a {
 .container {
 	width:1100px;
 	margin:auto;
-	background-color:#e8e8e8;
 	padding:5px;
 	font-family:Arial;
 	color:#474747;
@@ -30,17 +29,17 @@ a {
 
 #header {
 	width:100%;
-	height:80px;
-	background-color:#c8c8c8;
+	height:100px;
 	position:relative;
 	display:block;
+	border-bottom:1px solid #e8e8e8;
 }
 
 #wrapper {
+	margin-top:10px;
 	display:block;
 	min-height:800px;
 	position:relative;
-
 	clear:both;
 }
 
@@ -48,7 +47,6 @@ a {
 	position:absolute;
 	top:0px;
 	right:0px;
-	background-color:#a0a0a0;
 	
 }
 
@@ -60,22 +58,22 @@ a {
 
 .navbar ul li {
 	display:inline-block;
-	margin-left:20px;
-
+	margin:0px 0px;
 }
 
 .navbar ul li a {
 	text-decoration:none;
-	color:green;
+	color:#474747;
+	font-size:11px;
 }
 
 .navbar ul li a:hover {
-	color:#474747;
+	color:#009900;
 }
 
 #searchbar {
 	position:absolute;
-	bottom:0px;
+	bottom:10px;
 	right:0px;
 }
 

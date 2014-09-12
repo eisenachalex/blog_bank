@@ -28,7 +28,9 @@ ActiveRecord::Schema.define(version: 20140912164713) do
     t.string   "title"
     t.text     "body"
     t.integer  "user_id"
-    t.string   "category"
+    t.string   "category1"
+    t.string   "category2"
+    t.string   "category3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

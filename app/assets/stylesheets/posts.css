@@ -5,8 +5,9 @@
 	padding:10px;
 	border-radius:5px;
 	margin-top:20px;
-	background-color:#e8e8e8;
 	position:relative;
+	background-color:white;
+	overflow:hidden;
 }
 
 .post_preview a {

@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready(function(){
- 	$("#search_bar").on("keyup", function(){
- 		$.post('/users');
- 	})
-});
+$(document).ready ->
+  $(".comment_form").on("ajax:success", (e, data, status, xhr) ->
+    $(".comments").append xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $(".comment_form").append "<p>ERROR</p>"

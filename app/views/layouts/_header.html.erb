@@ -1,8 +1,4 @@
-<html>
-	<head>
-		<title>Blog Bank</title>
-	</head>
-	<body>
+
 		<div class = "container">
 			<div id="header">
 				<div id="logo">
@@ -24,6 +20,7 @@
 						<li><a href="#">Blogs</a></li>
 						<%if session[:user_id] %>
 							<li><%=link_to "My Account", user_path(@user.id) %></a></li>
+							<li><%=link_to "Log Out", logout_path %></a></li>
 						<% else %>
 							<li><%=link_to "Member Center", new_user_path %></a></li>
 						<% end %>

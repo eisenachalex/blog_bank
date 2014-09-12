@@ -9,6 +9,9 @@
 	position:relative;
 }
 
+.post_preview a {
+	color:#009900;
+}
 
 .post_preview .content {
 	width:80%;
@@ -53,4 +56,14 @@
 	right:10px;
 	font-size:12px;
 	color:green;
+}
+
+
+.post {
+	width:500px;
+	line-height:28px;
+}
+
+.post a {
+
 }

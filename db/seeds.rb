@@ -25,3 +25,13 @@ end
 	body = Faker::Lorem.paragraphs(3).join('\n')
 	user.posts.create(title:title,body:body)
 end
+
+300.times do
+	user_id = rand(1..100)
+	post_id = rand(1..100)
+	user = User.find(user_id)
+	post = Post.find(post_id)
+	body = Faker::Lorem.paragraphs(1).join('\n')
+	comment = Comment.create(post_id:post_id, user_id:user_id, body:body)
+	comment.save!
+end

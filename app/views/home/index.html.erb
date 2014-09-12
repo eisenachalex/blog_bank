@@ -1,5 +1,33 @@
 <div class="column">
 	<% @posts.each do |post| %>
+	<% @user = User.find(post.user_id) %>
+	<% @post = post %>
+			<div class="post_preview">
+				<div class="content">
+					<ul>
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">X</a></li>
+					</uL>
+					<div class="title">
+						<%= link_to post.title, user_post_path(@user,@post) %>
+					</div>
+					<div class="date">
+						<%= post.created_at %>
+					</div>
+					<div class="body">
+						<%= post.body %>
+					</div>
+				</div>
+				<div class="revenue">
+					$4.95
+				</div>
+			</div>
+	<% end %>
+</div>
+
+
+<div class="column">
+	<% @posts.each do |post| %>
 		<div class="post_preview">
 			<div class="content">
 				<ul>
@@ -7,7 +35,7 @@
 					<li><a href="#">X</a></li>
 				</uL>
 				<div class="title">
-					<%= post.title %>
+						<%= link_to post.title, user_post_path(@user,@post) %>
 				</div>
 				<div class="date">
 					<%= post.created_at %>
@@ -23,7 +51,6 @@
 	<% end %>
 </div>
 
-
 <div class="column">
 	<% @posts.each do |post| %>
 		<div class="post_preview">
@@ -33,32 +60,7 @@
 					<li><a href="#">X</a></li>
 				</uL>
 				<div class="title">
-					<%= post.title %>
-				</div>
-				<div class="date">
-					<%= post.created_at %>
-				</div>
-				<div class="body">
-					<%= post.body %>
-				</div>
-			</div>
-			<div class="revenue">
-				$4.95
-			</div>
-		</div>
-	<% end %>
-</div>
-
-<div class="column">
-	<% @posts.each do |post| %>
-		<div class="post_preview">
-			<div class="content">
-				<ul>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">X</a></li>
-				</uL>
-				<div class="title">
-					<%= post.title %>
+						<%= link_to post.title, user_post_path(@user,@post) %>
 				</div>
 				<div class="date">
 					<%= post.created_at %>

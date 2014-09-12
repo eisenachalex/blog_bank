@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 resources :users do
   resources :posts
 end
+
+resources :comments
+
 get '/member_center' => 'users#login'
 get 'sessions/logout' => 'sessions#destroy', as: :logout
 post 'sessions/new' => 'sessions#new', as: :login

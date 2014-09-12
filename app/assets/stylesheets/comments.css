@@ -1,0 +1,24 @@
+.comment {
+	width:600px;
+	height:auto;
+	background-color:#e8e8e8;
+	color:green;
+	margin-top:20px;
+	font-size:12px;
+}
+
+.comment .date{
+	font-style:italic;
+	display:inline;
+	font-size:10px;
+	color:#474747;
+}
+.comment_form {
+	
+}
+
+.comment_form textarea {
+	width:550px;
+	height:100px;
+	background-color:white;
+}

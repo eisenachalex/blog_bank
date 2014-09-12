@@ -1,0 +1,21 @@
+<div class="post">
+	<h1><%= @post.title %></h1>
+	<h3>Posted by: <%= @user.username %>  <%= @post.created_at %></h3>
+	<%= @post.body %>
+</div> 
+<div class="comments">
+	<%= form_for :comment, url: comments_path, html: {class: "comment_form"} do  |f| %>
+		<%= text_area_tag(:body, "Hi, nice site") %>
+		<%= f.submit "Post Comment" %>
+		<div style="clear:both">
+		</div>
+	<% end %>
+	<% @comments.each do |comment| %>
+		<div class="comment">
+			<%= comment.body %><br/>
+			<%= comment.user.username %>
+			<div class="date"><%= comment.created_at %></div>
+		</div>
+	<% end %>
+
+</div>

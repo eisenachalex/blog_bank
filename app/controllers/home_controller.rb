@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
 	def index
-		session[:user_id] = nil;
 		@all_posts = Post.all
 		@posts = []
 		if params[:filter]

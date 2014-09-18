@@ -1,13 +1,11 @@
 <div class="post">
 	<h1><%= @post.title %></h1>
 	<h3>Posted by: <%= @user.username %>  <%= @post.created_at %></h3>
-			<div class="post_preview">
 			<% if @post.photos.first %>
 			<% url = Dragonfly.app.fetch(@post.photos.first.image_uid) %>
 			<%= image_tag url.url %>
 			<% end %>
 	<%= @post.body %>
-</div> 
 <div class="comments">
 	<%= form_for @comment, html: {:class => "comment_form"}, url: {:controller => "comments", :action => "create", user_id:session[:user_id], post_id:@post.id} do |f| %>
 		<%= text_area_tag(:body, "Hi, nice site") %>

@@ -1,6 +1,11 @@
 <div class="post">
 	<h1><%= @post.title %></h1>
 	<h3>Posted by: <%= @user.username %>  <%= @post.created_at %></h3>
+			<div class="post_preview">
+			<% if @post.photos.first %>
+			<% url = Dragonfly.app.fetch(@post.photos.first.image_uid) %>
+			<%= image_tag url %>
+			<% end %>
 	<%= @post.body %>
 </div> 
 <div class="comments">

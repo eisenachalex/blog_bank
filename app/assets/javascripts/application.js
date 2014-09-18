@@ -14,8 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready ->
-  $(".comment_form").on("ajax:success", (e, data, status, xhr) ->
-    $(".comments").append xhr.responseText
-  ).on "ajax:error", (e, xhr, status, error) ->
-    $(".comment_form").append "<p>ERROR</p>"
+$(document).ready(function() {
+  // Global search function (partial)
+  $(document).on("click", "a.delete_post", function(e) {
+  	e.preventDefault;
+    var data = { post_id: $(this).attr("id")};
+    $.post('/delete_post', data, function(response) {
+    });
+      $(this).closest(".post_preview").fadeOut();// This will work even if the no of
+  });
+  
+  $(document).on("click", "a.edit_post", function(e) {
+    e.preventDefault;
+		var post_id = $(this).attr("id");
+		var url = '/edit_post?post_id=' + post_id;
+    console.log(url);
+    $.get(url, function(response) {
+    	 $("#post_side").html(response);
+    });
+  });
+});

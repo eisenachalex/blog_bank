@@ -1,0 +1,9 @@
+	<%= form_for @post, url: user_post_path(@user,@post), html:{class: "post_form", method:"patch"} do |f| %>
+		<%= f.text_field :title, placeholder: "Title", value: @post.title %>
+		<%= select_tag(:category1, options_for_select([["News","news"],["Home","home"],["Business","business"],["Technology","tech"],["Sports","sports"],["Entertainment","entertainment"],["Health","health"],["Science","Science"]])) %>
+		<%= select_tag(:category2, options_for_select([["News","news"],["Home","home"],["Business","business"],["Technology","tech"],["Sports","sports"],["Entertainment","entertainment"],["Health","health"],["Science","Science"]])) %>
+		<%= select_tag(:category3, options_for_select([["News","news"],["Home","home"],["Business","business"],["Technology","tech"],["Sports","sports"],["Entertainment","entertainment"],["Health","health"],["Science","Science"]])) %>
+		<%= text_area_tag(:body, "Hi, nice dsafassite") %>
+		<%= f.submit "Post"%>
+
+   <% end %>

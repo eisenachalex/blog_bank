@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	
 	protect_from_forgery
 	def index
 
@@ -32,7 +33,6 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id]);
 		@post = Post.new
 		@posts = @user.posts
-		p @posts
 	end
 
 

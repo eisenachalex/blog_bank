@@ -1,0 +1,4 @@
+---
+:path: ! '@post.title'
+:headers:
+  x-amz-acl: public-read-write

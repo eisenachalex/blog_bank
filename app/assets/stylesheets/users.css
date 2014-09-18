@@ -38,8 +38,9 @@
 	overflow:auto;
 }
 
+
 #archive_side {
-	background-color:#474747;
+	background-color:#a0a0a0;
 	margin:auto;
 	height:100%;
 	width:50%;
@@ -49,7 +50,9 @@
 	overflow:auto;
 }
 
-
+#post_side h2, #archive_side h2 {
+	margin:0px;
+}
 
 #user_nav_bar {
 	display:block;

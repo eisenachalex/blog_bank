@@ -39,16 +39,21 @@
 	list-style-type:none;
 	margin:0px;
 	padding:0px;
-	background-color:#a0a0a0;
 }
 
 .post_preview ul li {
 	display:inline-block;
 	font-size:11px;
+	margin-left:20px;
 }
 
 .post_preview ul li a {
 	text-decoration:none;
+	font-size:14px;
+	color:blue;
+	border-radius:100%;
+
+
 }
 
 .post_preview .revenue {

@@ -1,17 +1,17 @@
 .post_preview {
-	height:100px;
+	height:250px;
 	margin:auto;
-	width:85%;
+	width:250px;
 	padding:10px;
-	border-radius:5px;
+	color:white;
 	margin-top:20px;
 	position:relative;
-	background-color:white;
+	background-color:#474747;
 	overflow:hidden;
 }
 
 .post_preview a {
-	color:#009900;
+	color:white;
 }
 
 .post_preview .content {
@@ -19,12 +19,13 @@
 }
 
 
-.post_preview .title {
-	color:Green;
+.post_preview .title a {
+	color:#ffffff;
+	text-transform:uppercase;
 }
 
 .post_preview .date{
-	font-size:10px;
+	color:#009900;
 }
 
 .post_preview .body {

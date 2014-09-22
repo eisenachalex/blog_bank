@@ -16,10 +16,14 @@ class HomeController < ApplicationController
 		@users_with_posts = []
 		@all_users.each do |user|
 			if user.posts.count > 0
-				users.posts.each do |post|
-					if params[:filter] == "entertainment"
+				user.posts.each do |post|
+					post_categories = [post.category1,post.category2,post.category3]
+					p params[:filter]
+					p post_categories
+					if post_categories.include?(params[:filter])
+						@users_with_posts << user
 					end
-				@users_with_posts << user
+				end
 			end
 		end
 		if session[:user_id]

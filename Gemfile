@@ -12,6 +12,7 @@ gem 'dragonfly', '~> 1.0.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'dragonfly-s3_data_store'
+gem 'rails_12factor'
 gem 'aws-sdk'
 gem 'figaro'
 # Use Uglifier as compressor for JavaScript assets

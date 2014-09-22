@@ -2,22 +2,21 @@
 		<div class = "container">
 			<div id="header">
 				<div id="logo">
-					<a href="/">blog<span style="color:green">Bank</span></a>
+					<a href="/"><img src="/assets/blog_bank_logo.png"></img></a>
 				</div>
-				<ul class="category">
-					<li><%=link_to "News", root_path(filter: "news"), html: {class: "category"} %></li>
-					<li><%=link_to "Home", root_path(filter: "home"), html: {class: "category"} %></li>
-					<li><%=link_to "Business", root_path(filter: "business"), html: {class: "category"} %></li>
-					<li><%=link_to "Technology", root_path(filter: "tech"), html: {class: "category"} %></li>
-					<li><%=link_to "Sports", root_path(filter: "sports"), html: {class: "category"} %></li>
-					<li><%=link_to "Entertainment", root_path(filter: "entertainment"), html: {class: "category"} %></li>
-					<li><%=link_to "Health", root_path(filter: "health"), html: {class: "category"} %></li>
-					<li><%=link_to "Science", root_path(filter: "science"), html: {class: "category"} %></li>
+					<select id="category_filter">
+						<option name="filter" value="news">News</option>
+						<option name="filter" value="sports">Sports</option>
+						<option name="filter" value="entertainment">Entertainment</option>
+						<option name="filter" value="health">Health</option>
+						<option name="filter" value="business">Business</option>
+						<option name="filter" value="science">Science</option>
+					</select>
+
+
 				<div class="navbar">
 					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Blogs</a></li>
+						<li><a href="/">About us</a></li>
 						<%if session[:user_id] %>
 							<li><%=link_to "My Account", user_path(session[:user_id]) %></a></li>
 							<li><%=link_to "Log Out", logout_path %></a></li>

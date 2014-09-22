@@ -14,16 +14,15 @@ class PostsController < ApplicationController
 							category2:params[:category2],
 							category3:params[:category3])
 		@post.save!
-		@photo = Photo.new
-		@photo.image_uid = Dragonfly.app.store(params[:image], path: "images/some_identifier/the_name.jpg", headers: {'x-amz-acl' => 'public-read-write'})
-		@photo.post_id = @post.id
-		@photo.save!
+		if params[:image] != nil
+			@photo = Photo.new
+			@photo.image_uid = Dragonfly.app.store(params[:image], path: "images/some_identifier/the_name.jpg", headers: {'x-amz-acl' => 'public-read-write'})
+			@photo.post_id = @post.id
+			@photo.save!
+		end
 		redirect_to user_path(params[:user_id])
 	end
 
-	def filter
-		@posts = Post.all
-	end
 
 	def edit
 		@post = Post.find(params[:post_id])

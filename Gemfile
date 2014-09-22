@@ -13,7 +13,7 @@ gem 'dragonfly', '~> 1.0.7'
 gem 'sass-rails', '~> 4.0.3'
 gem 'dragonfly-s3_data_store'
 gem 'aws-sdk'
-
+gem 'figaro'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

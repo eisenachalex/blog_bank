@@ -1,78 +1,27 @@
-<div class="column">
-	<% @posts.each do |post| %>
-	<% @user = User.find(post.user_id) %>
-	<% @post = post %>
-			<div class="post_preview">
-				<div class="content">
-					<ul>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">X</a></li>
-					</uL>
-					<div class="title">
-						<%= link_to post.title, user_post_path(@user,@post) %>
-					</div>
-					<div class="date">
-						<%= post.created_at %>
-					</div>
-					<div class="body">
-						<%= post.body %>
-					</div>
-				</div>
-				<div class="revenue">
-					$4.95
-				</div>
+<div id="post_scroller">
+	<% @users_with_posts.each do |user| %>
+		<div class="column">
+			<div class="user_tag">
+				<%= user.username %>
 			</div>
-	<% end %>
-</div>
-
-
-<div class="column">
-	<% @posts.each do |post| %>
-		<div class="post_preview">
-			<div class="content">
-				<ul>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">X</a></li>
-				</uL>
-				<div class="title">
-						<%= link_to post.title, user_post_path(@user,@post) %>
+			<% user.posts.each do |post| %>
+				<div class="post_preview">
+					<div class="content">
+						<div class="title">
+							<%= link_to post.title, user_post_path(user,post) %>
+						</div>
+						<div class="date">
+							<%= post.created_at %>
+						</div>
+						<div class="body">
+							<%= post.body %>
+						</div>
+					</div>
+					<div class="revenue">
+						$4.95
+					</div>
 				</div>
-				<div class="date">
-					<%= post.created_at %>
-				</div>
-				<div class="body">
-					<%= post.body %>
-				</div>
-			</div>
-			<div class="revenue">
-				$4.95
-			</div>
+			<% end %>
 		</div>
 	<% end %>
 </div>
-
-<div class="column">
-	<% @posts.each do |post| %>
-		<div class="post_preview">
-			<div class="content">
-				<ul>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">X</a></li>
-				</uL>
-				<div class="title">
-						<%= link_to post.title, user_post_path(@user,@post) %>
-				</div>
-				<div class="date">
-					<%= post.created_at %>
-				</div>
-				<div class="body">
-					<%= post.body %>
-				</div>
-			</div>
-			<div class="revenue">
-				$4.95
-			</div>
-		</div>
-	<% end %>
-</div>
-

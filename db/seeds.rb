@@ -23,7 +23,11 @@ end
 	user = User.find(user_id)
 	title = Faker::Lorem.sentence
 	body = Faker::Lorem.paragraphs(3).join('\n')
-	user.posts.create(title:title,body:body)
+	categories = ["news","business","sports","science","health"]
+	category1 = categories[rand(0...4)]
+	category2 = categories[rand(0...4)]
+	category3 = categories[rand(0...4)]
+	user.posts.create(title:title,body:body,category1:category1,category2:category2,category3:category3)
 end
 
 300.times do

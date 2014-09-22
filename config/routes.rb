@@ -9,7 +9,7 @@ resources :comments
 get '/member_center' => 'users#login'
 get 'sessions/logout' => 'sessions#destroy', as: :logout
 post 'sessions/new' => 'sessions#new', as: :login
-post '/filter_posts' => 'posts#filter'
+get '/filter_posts' => 'home#filter_posts'
 post '/delete_post' => 'posts#delete_post'
 get '/edit_post' => 'posts#edit'
 root to: 'home#index'

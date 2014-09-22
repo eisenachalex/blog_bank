@@ -5,9 +5,11 @@
 }
 
 .column {
-	width:33%;
+	width:220px;
 	height:100%;
-	overflow:scroll;
 	background-color:#e8e8e8;
 	display:inline-block;
+	vertical-align:top;
+	overflow:hidden;
+	margin-right:0px;
 }

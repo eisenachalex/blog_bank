@@ -20,7 +20,6 @@ a {
 .container {
 	width:1100px;
 	margin:auto;
-	padding:5px;
 	font-family:Arial;
 	color:#474747;
 	position:relative;
@@ -38,14 +37,21 @@ a {
 #wrapper {
 	margin-top:10px;
 	display:block;
-	min-height:800px;
+	height:600px;
+	width:1100px;
 	position:relative;
+	overflow-y:hidden;
+	overflow-x:scroll;
 	clear:both;
+}
+
+#post_scroller{
+	width:100000px;
 }
 
 .navbar {
 	position:absolute;
-	top:0px;
+	top:10px;
 	right:0px;
 	
 }
@@ -64,7 +70,9 @@ a {
 .navbar ul li a {
 	text-decoration:none;
 	color:#474747;
-	font-size:11px;
+	font-size:14px;
+	text-transform:uppercase;
+	margin-left:10px;
 }
 
 .navbar ul li a:hover {
@@ -78,8 +86,8 @@ a {
 }
 
 #searchbar input {
-	padding:5px 7px;
-	font-size:20px;
+	padding:3px 5px;
+	font-size:12px;
 	width:500px;
 }
 
@@ -94,7 +102,8 @@ a {
 	font-size:50px;
 	font-weight:bold;
 	position:absolute;
-	bottom:0px;
+	top:5px;
+	left:0px;
 }
 
 #footer {

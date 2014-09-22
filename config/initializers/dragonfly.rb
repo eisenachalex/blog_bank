@@ -10,8 +10,8 @@ Dragonfly.app.configure do
 
   datastore :s3,
    		bucket_name: 'blog_bank',
-   		access_key_id: 'AKIAIE7J4P6A2QAJGT6A',
-   		secret_access_key: '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'
+   		access_key_id: '#',
+   		secret_access_key: '#'
 end
 
 # Logger

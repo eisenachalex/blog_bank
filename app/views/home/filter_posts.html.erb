@@ -1,10 +1,9 @@
 <div id="post_scroller">
-	<% @users_with_posts.each do |user| %>
+	<% @users_with_posts.each do |user,posts_array| %>
 		<div class="column">
 			<div class="user_tag">
-				<%= user.username %>
 			</div>
-			<% user.posts.each do |post| %>
+			<% posts_array.each do |post| %>
 				<div class="post_preview">
 					<div class="content">
 						<div class="title">

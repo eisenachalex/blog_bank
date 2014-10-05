@@ -10,6 +10,7 @@ get '/member_center' => 'users#login'
 get 'sessions/logout' => 'sessions#destroy', as: :logout
 post 'sessions/new' => 'sessions#new', as: :login
 get '/filter_posts' => 'home#filter_posts'
+get '/about' => 'home#about'
 post '/delete_post' => 'posts#delete_post'
 get '/edit_post' => 'posts#edit'
 root to: 'home#index'

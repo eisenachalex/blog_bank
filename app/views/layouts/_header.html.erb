@@ -12,11 +12,9 @@
 						<option name="filter" value="business">Business</option>
 						<option name="filter" value="science">Science</option>
 					</select>
-
-
 				<div class="navbar">
 					<ul>
-						<li><a href="/">About us</a></li>
+						<li><a href="/about">About us</a></li>
 						<%if session[:user_id] %>
 							<li><%=link_to "My Account", user_path(session[:user_id]) %></a></li>
 							<li><%=link_to "Log Out", logout_path %></a></li>
@@ -24,9 +22,15 @@
 							<li><%=link_to "Member Center", new_user_path %></a></li>
 						<% end %>
 					</ul>
+					<ul class="social_media">
+						<li>T</li>
+						<li>F</li>
+						<li>G</li>
+						<li>L</li>
+					</ul>
 				</div>
 				<div id="searchbar">
-					<input type="text" id="search_bar" placeholder="Search all blogs..."><button type="submit">Go!</button>
+					<input type="text" id="search_bar" placeholder="Search all blogs..."><button id="search_button" type="submit">Go!</button>
 				</div>
 			</div>
 			<div id="wrapper">

@@ -23,29 +23,28 @@
 }
 
 .post_form textarea {
-	height:80%;
-	width:450px;
-	border:none;
+	height:350px;
+	width:780px;
+	margin-top:20px;
+	border:1px dotted #a0a0a0;
 }
 
 #post_side {
 	position:absolute;
-	top:0px;
-	background-color:#e8e8e8;
+	top:50px;
 	left:0px;
-	width:50%;
-	height:100%;
-	overflow:auto;
+	width:900px;
+	height:600px;
 }
 
 
 #archive_side {
-	background-color:#a0a0a0;
+	background-color:#e8e8e8;
 	margin:auto;
 	height:100%;
-	width:50%;
+	width:300px;
 	position:absolute;
-	top:0px;
+	top:50px;
 	right:0px;
 	overflow:auto;
 }
@@ -54,10 +53,16 @@
 	margin:0px;
 }
 
+#archive_side h2 {
+	text-align:right;
+}
+
 #user_nav_bar {
 	display:block;
-	background-color:#a0a0a0;
+	border:1px dotted #004400;
 	height:20px;
+	clear:both;
+	padding:10px;
 }
 
 

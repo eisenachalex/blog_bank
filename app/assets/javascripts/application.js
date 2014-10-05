@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() {
-  // Global search function (partial)
   $(document).on("click", "a.delete_post", function(e) {
   	e.preventDefault;
     var data = { post_id: $(this).attr("id")};
@@ -27,14 +26,23 @@ $(document).ready(function() {
   $(document).on("change", "#category_filter", function(e) {
     e.preventDefault;
     var value = $(this).val();
-    console.log(value);
     url = "/filter_posts?filter=" + value
     $.get(url,function(response) {
       $("#wrapper").html(response);
     });
-    //   $(this).closest(".post_preview").fadeOut();// This will work even if the no of
   });
   
+  $(document).on("click", "#search_button", function(e) {
+    e.preventDefault;
+    var value = $("#search_bar").val();
+    url = "/filter_posts?search_term=" + value
+    $.get(url,function(response) {
+      $("#wrapper").html(response);
+    });
+  });
+
+
+
   $(document).on("click", "a.edit_post", function(e) {
     e.preventDefault;
 		var post_id = $(this).attr("id");

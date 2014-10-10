@@ -9,7 +9,7 @@ Dragonfly.app.configure do
   url_format "/name"
 
   datastore :s3,
-   		bucket_name: 'blog_bank',
+   		bucket_name: 'blogbank',
    		access_key_id: '#',
    		secret_access_key: '#'
 end

@@ -35,6 +35,7 @@ class HomeController < ApplicationController
 				end
 			end
 		end
+		@users_with_posts.delete_if {|k,v| v == []}
 		if session[:user_id]
 			@user = User.find(session[:user_id])
 		end

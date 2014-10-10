@@ -1,3 +1,32 @@
+<% if @guest %>
+<h2><%= @user.username %></h2>
+<% @posts.each do |post| %>
+		<div class="post_preview">
+			<% if post.photos.first %>
+			<% url = Dragonfly.app.fetch(post.photos.first.image_uid) %>
+			<%= image_tag url.thumb('100x100').url %>
+			<% end %>
+			<div class="content">
+				<ul>
+					<li><a id= <%=post.id%> class="edit_post">Edit</a></li>
+					<li><a id = <%=post.id%> class="delete_post">Delete</a></li>
+				</ul>
+					<div class="title">
+						<%= post.title %>
+					</div>
+					<div class="date">
+						<%= post.created_at %>
+					</div>
+					<div class="body">
+						<%= post.body %>
+					</div>
+			</div>
+			<div class="revenue">
+				$4.95
+			</div>
+		</div>
+	<% end %>
+<% else %>
 <div id="user_nav_bar"> 
 	Welcome back, <%= @user.firstname %>!
 </div>
@@ -45,3 +74,4 @@
 		</div>
 	<% end %>
 </div>
+<% end %>

@@ -30,9 +30,12 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id]);
+		@user = User.find(params[:id])
 		@post = Post.new
 		@posts = @user.posts
+		if(params[:guest])
+			@guest = true
+		end
 	end
 
 

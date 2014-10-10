@@ -23,7 +23,6 @@ class PostsController < ApplicationController
 		redirect_to user_path(params[:user_id])
 	end
 
-
 	def edit
 		@post = Post.find(params[:post_id])
 		@user = User.find(session[:user_id])
@@ -32,7 +31,15 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		
+		@post = Post.find(params[:id])
+		@post.category1 = params[:category1]
+		@post.category2 = params[:category2]
+		@post.category3 = params[:category3]
+		@post.title = params[:post][:title]
+		@post.body = params[:body]
+		@post.save!
+			@user = User.find(session[:user_id])
+		redirect_to user_path(@user)
 	end
 
 	def show

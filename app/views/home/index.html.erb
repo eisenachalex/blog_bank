@@ -13,12 +13,15 @@
 						<div class="date">
 							<%= post.created_at %>
 						</div>
+
 						<div class="body">
-							<%= post.body %>
+							<% if post.photos.first %>
+								<% url = Dragonfly.app.fetch(post.photos.first.image_uid) %>
+								<%= image_tag url.url %>
+							<% else %>
+								<%= post.body %>
+							<% end %>
 						</div>
-					</div>
-					<div class="revenue">
-						$4.95
 					</div>
 				</div>
 			<% end %>

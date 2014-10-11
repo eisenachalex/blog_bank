@@ -14,13 +14,13 @@
 }
 
 .post_preview .content {
-	width:80%;
+	width:160;
 }
 
 
 .post_preview .title a {
 	color:#ffffff;
-	text-transform:uppercase;
+	font-weight:bold;
 }
 
 .post_preview .date{

@@ -15,7 +15,12 @@
 								<%= post.created_at %>
 							</div>
 							<div class="body">
-								<%= post.body %>
+								<% if post.photos.first %>
+									<% url = Dragonfly.app.fetch(post.photos.first.image_uid) %>
+									<%= image_tag url.url %>
+								<% else %>
+									<%= post.body[0..200]%>
+								<% end %>
 							</div>
 						</div>
 					</div>

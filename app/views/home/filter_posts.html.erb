@@ -1,25 +1,26 @@
 <div id="post_scroller">
-	<% @users_with_posts.each do |user,posts_array| %>
-		<div class="column">
-			<div class="user_tag">
-				<%= link_to  user.username, user_path(user, :guest => "yes") %>
-			</div>
-			<% posts_array.each do |post| %>
-				<div class="post_preview">
-					<div class="content">
-						<div class="title">
-							<%= link_to post.title, user_post_path(user,post) %>
-						</div>
-						<div class="date">
-							<%= post.created_at %>
-						</div>
-						<div class="body">
-							<%= post.body %>
+	<div id="inner_post">
+		<% @users_with_posts.each do |user,posts_array| %>
+			<div class="column">
+				<div class="user_tag">
+					<%= link_to  user.username, user_path(user, :guest => "yes") %>
+				</div>
+				<% posts_array.each do |post| %>
+					<div class="post_preview">
+						<div class="content">
+							<div class="title">
+								<%= link_to post.title, user_post_path(user,post) %>
+							</div>
+							<div class="date">
+								<%= post.created_at %>
+							</div>
+							<div class="body">
+								<%= post.body %>
+							</div>
 						</div>
 					</div>
-
-				</div>
-			<% end %>
-		</div>
-	<% end %>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
 </div>

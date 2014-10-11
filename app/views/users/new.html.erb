@@ -1,24 +1,35 @@
-<h2>Log in</h2>
-<%= form_for :session, url: login_path, html: {class: "login_form"} do  |f| %>
-	<%= f.text_field :email, placeholder: "Email" %>
-	<%= f.password_field :password, placeholder: "Password" %>
-    <%= f.submit "Log in" %>
-    <div style="clear:both">
-    </div>
-<% end %>
+<div class="page_block"> 
+	<h2>Log in</h2>
+	<%= form_for :session, url: login_path, html: {class: "login_form"} do  |f| %>
+		<%= f.label :email %>
+		<%= f.text_field :email, placeholder: "Email" %>
+		<%= f.label :password %>
+		<%= f.password_field :password, placeholder: "Password" %>
+	    <%= f.submit "Log in" %>
+	    <div style="clear:both">
+	    </div>
+	<% end %>
+</div>
 
-
-<h2>Sign up</h2>
-<%= form_for @user, url: users_path, html:{class: "login_form"} do |f| %>
-	<%= f.text_field :email, placeholder: "Email" %>
-	<%= f.text_field :username, placeholder: "Username" %>
-	<%= f.password_field :password, placeholder: "Password" %>
-	<%= f.password_field :passwordconfirm, placeholder:"Confirm Password"%>
-	<%= f.text_field :firstname, placeholder:"First Name"%>
-	<%= f.text_field :lastname, placeholder:"Last Name"%>
-	<%= f.text_field :address, placeholder:"Address"%>
-	<%= f.submit "Sign Up"%>
-    <div style="clear:both">
-    </div>
-<% end %>
-
+<div class="page_block">
+	<h2>Sign up</h2>
+	<%= form_for @user, url: users_path, html:{class: "login_form"} do |f| %>
+		<%= f.label :email %>
+		<%= f.text_field :email, placeholder: "email we can reach" %>
+		<%= f.label :Blog_name %>
+		<%= f.text_field :username, placeholder: "name of your blog" %>
+		<%= f.label :password %>
+		<%= f.password_field :password, placeholder: "password" %>
+		<%= f.label :password_confirm %>
+		<%= f.password_field :passwordconfirm, placeholder:"confirm password"%>
+		<%= f.label :first_name %>
+		<%= f.text_field :firstname, placeholder:"First Name"%>
+		<%= f.label :last_name %>
+		<%= f.text_field :lastname, placeholder:"Last Name"%>
+		<%= f.label :address %>
+		<%= f.text_field :address, placeholder:"Address"%>
+		<%= f.submit "Sign Up"%>
+		<div style="clear:both">
+		</div>
+	<% end %>
+</div>

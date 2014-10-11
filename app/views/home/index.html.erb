@@ -12,7 +12,7 @@
 								<%= link_to post.title, user_post_path(user,post) %>
 							</div>
 							<div class="date">
-								<%= post.created_at %>
+								<%= post.created_at.to_date %>
 							</div>
 
 							<div class="body">

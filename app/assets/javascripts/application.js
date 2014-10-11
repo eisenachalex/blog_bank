@@ -41,6 +41,10 @@ $(document).ready(function() {
     });
   });
 
+  $(document).on("click", "#member_center_link", function(e) {
+    e.preventDefault;
+    $("#login_form").slideDown("slow");
+  });
 
 
   $(document).on("click", "a.edit_post", function(e) {

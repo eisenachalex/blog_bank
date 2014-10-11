@@ -13,13 +13,37 @@
 						<option name="filter" value="science">Science</option>
 					</select>
 				<div class="navbar">
+					<div id="login_form">
+						<%= form_for :session, url: login_path, html: {class: "login_form"} do  |f| %>
+							<%= f.label :email %>
+							<%= f.text_field :email, placeholder: "Email" %>
+							<%= f.label :password %>
+							<%= f.password_field :password, placeholder: "Password" %>
+						    <%= f.submit "Log in" %>
+						    <div style="clear:both">
+						    </div>
+						<% end %>
+						<div id="sign_up_box">
+							<div class="new">New to Blogbank?</div>
+							<ul>
+								<li><a href="#">Sign Up</a></li>
+								<li><a href="#">How it works</a></li>
+							</ul>
+							<hr>
+							<div class="new">Existing Bloggers</div>
+							<ul>
+								<li><a href="#">Members Forum</a></li>
+								<li><a href="#">Legal</a></li>
+							</ul>
+						</div>
+					</div>
 					<ul>
 						<li><a href="/about">About us</a></li>
 						<%if session[:user_id] %>
 							<li><%=link_to "My Account", user_path(session[:user_id]) %></a></li>
 							<li><%=link_to "Log Out", logout_path %></a></li>
 						<% else %>
-							<li><%=link_to "Member Center", new_user_path %></a></li>
+							<li><a  id="member_center_link">Member Center</a></li>
 						<% end %>
 					</ul>
 					<ul class="social_media">

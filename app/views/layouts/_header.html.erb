@@ -15,12 +15,14 @@
 				<div class="navbar">
 					<div id="login_form">
 						<%= form_for :session, url: login_path, html: {class: "login_form"} do  |f| %>
+							<%= f.label :email, "Email" %>
 							<%= f.text_field :email, placeholder: "Email" %>
+							<%= f.label :password , "Password"%>
 							<%= f.password_field :password, placeholder: "Password" %>
 						    <%= f.submit "Log in" %>
 						    <div style="clear:both">
 						    </div>
-						
+
 						<% end %>
 						<div id="sign_up_box">
 							<div class="new">New to Blogbank?</div>

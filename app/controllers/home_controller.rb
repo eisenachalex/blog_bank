@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
+		session[:user_id] = nil
 		@all_users = User.all
 		@users_with_posts = []
 		@all_users.each do |user|

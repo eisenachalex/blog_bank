@@ -9,5 +9,3 @@ development:
   secret_access_key: secret
   bucket: blogbank
   region: us-east-1
-
-

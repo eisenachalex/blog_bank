@@ -20,7 +20,7 @@
 									<% url = Dragonfly.app.fetch(post.photos.first.image_uid) %>
 									<%= image_tag url.url %>
 								<% else %>
-									<%= post.body %>
+									<%= post.body[0..200]%>
 								<% end %>
 							</div>
 						</div>

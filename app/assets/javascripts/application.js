@@ -23,9 +23,12 @@ $(document).ready(function() {
       $(this).closest(".post_preview").fadeOut();// This will work even if the no of
   });
 
-  $(document).on("change", "#category_filter", function(e) {
+  $(document).on("click", ".filter", function(e) {
     e.preventDefault;
-    var value = $(this).val();
+    var value = $(this).html();
+    console.log("VALUE" + value);
+    $("#category_filter").slideToggle();
+    $("#filler_filter_text").html(value);
     url = "/filter_posts?filter=" + value
     $.get(url,function(response) {
       $("#wrapper").html(response);
@@ -39,6 +42,11 @@ $(document).ready(function() {
     $.get(url,function(response) {
       $("#wrapper").html(response);
     });
+  });
+
+  $(document).on("click", "#category_button", function(e) {
+    e.preventDefault;
+    $("#category_filter").slideToggle();
   });
 
   $(document).on("click", "#member_center_link", function(e) {

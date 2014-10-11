@@ -4,14 +4,18 @@
 				<div id="logo">
 					<a href="/"><img src="/assets/blog_bank_logo.png"></img></a>
 				</div>
-					<select id="category_filter">
-						<option name="filter" value="news">News</option>
-						<option name="filter" value="sports">Sports</option>
-						<option name="filter" value="entertainment">Entertainment</option>
-						<option name="filter" value="health">Health</option>
-						<option name="filter" value="business">Business</option>
-						<option name="filter" value="science">Science</option>
-					</select>
+				<div id="categories">
+					<span id="filler_filter_text">Filter Posts</span>
+					<a  id="category_button">v<a>
+					<div id="category_filter">
+						<div class="filter" value="news">news</div>
+						<div class="filter" value="sports">sports</div>
+						<div class="filter" value="entertainment">entertainment</div>
+						<div class="filter" value="health">health</div>
+						<div class="filter" value="business">business</div>
+						<div class="filter" value="science">science</div>
+					</div>
+				</div>
 				<div class="navbar">
 					<div id="login_form">
 						<%= form_for :session, url: login_path, html: {class: "login_form"} do  |f| %>
@@ -19,15 +23,15 @@
 							<%= f.text_field :email, placeholder: "Email" %>
 							<%= f.label :password , "Password"%>
 							<%= f.password_field :password, placeholder: "Password" %>
-						    <%= f.submit "Log in" %>
+						    <%= f.submit "Log in", html: {class: "login_button"} %>
 						    <div style="clear:both">
 						    </div>
 
 						<% end %>
 						<div id="sign_up_box">
-							<div class="new">New to Blogbank?</div>
+							<div class="new"><%= link_to "New to blogbank?", new_user_path %></div>
 							<ul>
-								<li><a href="#">Sign Up</a></li>
+								<li><%= link_to "Sign up", new_user_path %></li>
 								<li><a href="#">How it works</a></li>
 							</ul>
 							<hr>
@@ -48,14 +52,14 @@
 						<% end %>
 					</ul>
 					<ul class="social_media">
-						<li>T</li>
-						<li>F</li>
-						<li>G</li>
-						<li>L</li>
+						<a href="https://www.facebook.com/blogbank"><li class="facebook"></li></a>
+						<a href="https:www.facebook.com/blogbank"><li class="instagram"></li></a>
+						<a href="https://plus.google.com/u/0/111282199297623747326/about"><li class="google_plus"></li></a>
+						<a href="https://www.twitter.com/theblogbank"><li class="twitter"></li></a>
 					</ul>
 				</div>
 				<div id="searchbar">
-					<input type="text" id="search_bar" placeholder="Search all blogs..."><button id="search_button" type="submit">Go!</button>
+					<input type="text" id="search_bar" placeholder="Search all blogs..."><button id="search_button" type="submit">Search</button>
 				</div>
 			</div>
 			<div id="header_offset"></div>

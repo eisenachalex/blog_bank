@@ -1,5 +1,43 @@
 #category_filter {
 	position:absolute;
+	left:-1px;
+	padding:5px;
+	top:21px;
+	width:170px;
+	background-color:white;
+	display:none;
+	z-index:1000000;
+	line-height:30px;
+	border:1px solid #bcd97e;
+	border-top:none;
+}
+
+.filter:hover {
+	background-color:#bcd97e;
+	color:white;
+}
+
+#category_button {
+	position:absolute;
+	right:0px;
+	top:0px;
+	padding:3px 5px;
+	font-size:12px;	
+	background-color:#bcd97e;
+	color:#474747;
+	margin:auto;
+	text-align:center;
+}
+
+
+#categories {
+	position:absolute;
 	left:0px;
-	bottom:0px;
+	bottom:10px;
+	font-size:12px;
+	padding:3px 5px;
+	border:1px solid #bcd97e;
+	width:200px;
+	color:#474747;
+	background-color:#ffffff;
 }

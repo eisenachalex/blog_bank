@@ -18,6 +18,24 @@ a {
 	text-decoration:none;
 	cursor:pointer;
 }
+
+.facebook {
+	background-image:url("blog_bank_facebook.png");
+}
+
+.twitter {
+	background-image:url("blog_bank_twitter.png");	
+}
+
+.google_plus{
+	background-image:url("blog_bank_google.png");	
+}
+
+.instagram {
+	background-image:url("blog_bank_instagram.png");	
+}
+
+
 .container {
 	width:1100px;
 	margin:auto;
@@ -31,7 +49,7 @@ a {
 	height:50px;
 	width:1100px;
 	margin-left:-40px;
-	background-color:#bcd970;
+	background-color:#bcd97e;
 	display:block;
 }
 
@@ -63,6 +81,9 @@ a {
 
 .social_media {
 	text-align:right;
+	position:absolute;
+	top:25px;
+	right:0px;
 }
 
 .social_media li {
@@ -70,6 +91,10 @@ a {
 	width:25px;
 	color:green;
 	background-color:#474747;
+}
+.social_meda li a {
+	width:25px;
+	height:25px;
 }
 
 .navbar ul {
@@ -87,32 +112,40 @@ a {
 	text-decoration:none;
 	color:#474747;
 	font-size:14px;
-	text-transform:uppercase;
 	margin-left:10px;
 }
 
 .navbar ul li a:hover {
-	color:#009900;
+	color:#bcd97e;
 }
 
 #searchbar {
 	position:absolute;
 	bottom:10px;
 	right:0px;
+	vertical-align:baseline;
+}
+
+#search_button {
+	background-color:#bcd97e;
+	border:none;
+	color:#474747;
+	padding:3px 5px;
+	font-size:12px;
+	border:1px solid #bcd97e;
 }
 
 #searchbar input {
 	padding:3px 5px;
 	font-size:12px;
 	width:500px;
+	color:#474747;
+	border:none;
+	vertical-align:baseline;
+	border:1px solid #bcd97e;
 }
 
-#dropdown {
-	position:absolute;
-	left:250px;
-	bottom:20px;
-	font-size:20px;
-}
+
 
 #logo {
 	font-size:50px;
@@ -152,5 +185,5 @@ a {
 
 #footer_navbar li a {
 	margin-right:20px;
-	color:#009900;
+	color:#bcd97e;
 }

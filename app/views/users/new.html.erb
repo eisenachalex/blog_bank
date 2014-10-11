@@ -1,26 +1,52 @@
-<div class="page_block"> 
-	<h2>Log in</h2>
-
-</div>
 
 <div class="page_block">
-	<h2>Sign up</h2>
-	<%= form_for @user, url: users_path, html:{class: "login_form"} do |f| %>
-		<%= f.label :email %>
-		<%= f.text_field :email, placeholder: "email we can reach" %>
-		<%= f.label :Blog_name %>
-		<%= f.text_field :username, placeholder: "name of your blog" %>
-		<%= f.label :password %>
-		<%= f.password_field :password, placeholder: "password" %>
-		<%= f.label :password_confirm %>
-		<%= f.password_field :passwordconfirm, placeholder:"confirm password"%>
-		<%= f.label :first_name %>
-		<%= f.text_field :firstname, placeholder:"First Name"%>
-		<%= f.label :last_name %>
-		<%= f.text_field :lastname, placeholder:"Last Name"%>
-		<%= f.label :address %>
-		<%= f.text_field :address, placeholder:"Address"%>
-		<%= f.submit "Sign Up"%>
+	<%= form_for @user, url: users_path, html:{class: "sign_up_form"} do |f| %>
+		<div class="form_title">Sign up</div>
+		<table>
+			<tr>
+				<td>
+					<%= f.label :email, "email*" %>
+					<%= f.text_field :email, placeholder: "email we can reach" %>
+				</td>
+				<td>
+					<%= f.label :Blog_name, "blog name*"  %>
+					<%= f.text_field :username, placeholder: "name of your blog" %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= f.label :password, "password*"  %>
+					<%= f.password_field :password, placeholder: "password" %>
+				</td>
+				<td>
+					<%= f.label :password_confirm, "confirm password*"%>
+					<%= f.password_field :passwordconfirm, placeholder:"confirm password"%>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= f.label :first_name, "first name*" %>
+					<%= f.text_field :firstname, placeholder:"First Name"%>
+				</td>
+				<td>
+					<%= f.label :lastname, "last name*"%>
+					<%= f.text_field :lastname, placeholder:"last name"%>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= f.label :address, "home address*" %>
+					<%= f.text_field :address, placeholder:"Address"%>
+				</td>
+				<td>
+					<%= f.submit "Sign Up", :class => "sign_up_button" %>
+				</td>
+			</tr>
+
+
+
+
+	</table>
 		<div style="clear:both">
 		</div>
 	<% end %>

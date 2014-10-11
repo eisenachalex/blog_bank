@@ -7,10 +7,13 @@
 	background-color:#474747;
 	position:relative;
 	overflow:hidden;
+		box-shadow:35px 5px 5px #a0a0a0;
+
 }
 
+
 .expanded_preview {
-	width:1100px; 
+	width:600px; 
 	padding:10px;
 	color:white;
 	margin:0px;
@@ -36,6 +39,7 @@
 
 .post_preview .date{
 	color:#bcd97e;
+	font-size:10px;
 }
 
 .post_preview .body {
@@ -50,6 +54,7 @@
 	list-style-type:none;
 	margin:0px;
 	padding:0px;
+
 }
 
 .post_preview ul li {
@@ -93,6 +98,6 @@
 	line-height:28px;
 }
 
-.post a {
 
-}
+a{ 
+color:black;}

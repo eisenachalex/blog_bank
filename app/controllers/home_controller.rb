@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+	class HomeController < ApplicationController
 	def index
 		@all_users = User.all
 		@users_with_posts = []

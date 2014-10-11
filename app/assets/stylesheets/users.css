@@ -29,7 +29,12 @@ background-image: -webkit-linear-gradient(top, #616161 0%, #474747 100%);
 background-image: linear-gradient(to bottom, #616161 0%, #474747 100%);
 }
 
-#login_form input {
+
+.login_button {
+	border:none;
+	background-color:#bcd97e;
+	padding:5px;
+	color:#474747;
 }
 
 #sign_up_box {
@@ -110,12 +115,11 @@ background-image: linear-gradient(to bottom, #616161 0%, #474747 100%);
 
 
 #archive_side {
-	background-color:#e8e8e8;
 	margin:auto;
 	height:100%;
-	width:300px;
+	width:auto;
 	position:absolute;
-	top:50px;
+	top:0px;
 	right:0px;
 	overflow:auto;
 }
@@ -128,15 +132,99 @@ background-image: linear-gradient(to bottom, #616161 0%, #474747 100%);
 	text-align:right;
 }
 
+.title_header {
+	color:#bcd97e;
+	display:block;
+	background-color:#474747;
+	font-size:20px;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+
 #user_nav_bar {
 	display:block;
-	border:1px dotted #004400;
+	background-color:#e8e8e8;
+	width:600px;
 	height:20px;
 	clear:both;
 	padding:10px;
 }
 
 .page_block{
-	display:inline-block;
+	margin:auto;
+	text-align:center;
 }
+
+.user_options {
+	position:absolute;
+	top:0px;
+	right:0px;
+	font-size:14px;
+	padding:2px 0px;
+}
+
+.user_options a {
+	color:#bcd97e;
+	border-left:1px solid #474747;
+	padding:5px;
+}
+
+.user_posts {
+	width:280px;
+}
+
+.sign_up_form {
+	height:auto;
+	width:600px;
+	margin:auto;
+	background-color:#474747;
+	padding:20px;
+	color:#bcd97e;
+}
+.sign_up_form input,label {
+	display:block;
+	clear:both;
+}
+
+.sign_up_form table {
+	margin:auto;
+	background-color:;
+	text-align:center;
+}
+.sign_up_form table td {
+	padding:10px;
+	position:relative;
+}
+
+.sign_up_form label{
+	margin-bottom:5px;
+}
+
+.form_title {
+	font-size:30px;
+	display:block;
+	clear:both;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+.sign_up_form input {
+	margin-bottom:10px;
+	padding:2px 5px;
+}
+
+.sign_up_button {
+	border:none;
+	background-color:#bcd97e;
+	color:#474747;
+	position:absolute;
+	left:10px;
+	padding:10px;
+	width:195px;
+	font-weight:bold;
+	font-size:20px;
+	bottom:10px;
+}
+
+
+
 

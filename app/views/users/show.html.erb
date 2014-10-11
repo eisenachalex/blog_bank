@@ -45,23 +45,24 @@
 
 
 <div id="archive_side">
-	<h2>Manage Posts</h2>
+	<span class="title_header">Manage Posts</span>
 	<% @posts.each do |post| %>
-		<div class="post_preview">
+		<div class="post_preview user_posts" style='width:400px;'>
 			<% if post.photos.first %>
 			<% url = Dragonfly.app.fetch(post.photos.first.image_uid) %>
 			<%= image_tag url.thumb('100x100').url %>
 			<% end %>
 			<div class="content">
-				<ul>
-					<li><a id= <%=post.id%> class="edit_post">Edit</a></li>
-					<li><a id = <%=post.id%> class="delete_post">Delete</a></li>
-				</ul>
+				<div class="user_options">
+						<a id= <%=post.id%> class="edit_post">Edit</a>
+						<a id = <%=post.id%> class="delete_post">Delete</a>
+
+				</div>
 					<div class="title">
 						<%= post.title %>
 					</div>
 					<div class="date">
-						<%= post.created_at %>
+								<%= post.created_at.strftime("%B %d, %Y") %>
 					</div>
 					<div class="body">
 						<%= post.body %>

@@ -79,6 +79,14 @@ a {
 	right:0px;
 }
 
+#about_us {
+	margin-top:20px;
+	width:400px;
+	line-height:22px;
+	padding:10px;
+	height:800px;
+}
+
 .social_media {
 	text-align:right;
 	position:absolute;

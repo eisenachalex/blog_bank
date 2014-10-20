@@ -4,7 +4,8 @@
 		@users_with_posts = []
 		@all_users.each do |user|
 			if user.posts.count > 0
-				@users_with_posts << user
+			modified_user = user
+				@users_with_posts << modified_user	
 			end
 		end
 		if session[:user_id]

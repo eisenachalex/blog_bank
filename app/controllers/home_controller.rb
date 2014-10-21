@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 		@all_users.each do |user|
 			if user.posts.count > 0
 				modified_user = [user]
-				if user.twitter_handle
+				if user.twitter_handle != ""
 					p "add it"
 					twitter_dict = {}
 					twitter_dict['tweets'] = client.user_timeline(user.twitter_handle, count: 5)
@@ -41,6 +41,7 @@ class HomeController < ApplicationController
 			if user.posts.count > 0
 				@users_with_posts[user] = []
 				user.posts.order('created_at DESC').each do |post|
+					
 					if params[:filter]
 						post_categories = [post.category1,post.category2,post.category3]
 						if post_categories.include?(params[:filter])

@@ -7,6 +7,7 @@
 					<span class="slash">/</span><%= link_to this_user.username, user_path(this_user, :guest => "yes") %>
 				</div>
 				<% this_user.posts.order('created_at DESC').each do |post| %>
+					<% if user[1] %>
 						<% @tweets = user[1]['tweets'] %>
 						<% @tweets.each do |tweet| %>
 						<div class="post_preview twitter_post">
@@ -18,6 +19,7 @@
 							</div>
 						</div>
 						<%  end %>
+					<% end %>
 					<div class="post_preview">
 						<div class="content">
 							<div class="title">

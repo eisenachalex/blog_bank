@@ -4,7 +4,7 @@
 		<% @users_with_posts.each do |user,posts_array| %>
 			<div class="column">
 				<div class="user_tag">
-					<%= link_to  user.username, user_path(user, :guest => "yes") %>
+					<span class="slash">/</span><%= link_to  user.username, user_path(user, :guest => "yes") %>
 				</div>
 				<% posts_array.each do |post| %>
 					<div class="post_preview">

@@ -22,7 +22,7 @@
 		@all_users.each do |user|
 			if user.posts.count > 0
 				@users_with_posts[user] = []
-				user.posts.each do |post|
+				user.posts.order('created_at DESC').each do |post|
 					if params[:filter]
 						post_categories = [post.category1,post.category2,post.category3]
 						if post_categories.include?(params[:filter])

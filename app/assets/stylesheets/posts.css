@@ -11,7 +11,6 @@
 
 }
 
-
 .expanded_preview {
 	width:600px; 
 	padding:10px;
@@ -101,3 +100,20 @@
 
 a{ 
 color:black;}
+
+.twitter_post {
+	background-color:#f0f0f0;
+	box-shadow:none;
+	color:#474747;
+	min-height:50px;
+}
+
+.twitter_post a  {
+	color:#bcd97e;
+	vertical-align: top;
+}
+.twitter_post img {
+	display:inline;
+	border:1px solid #e8e8e8;
+}
+

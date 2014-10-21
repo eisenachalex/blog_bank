@@ -39,13 +39,16 @@
 					<%= f.text_field :address, placeholder:"Address"%>
 				</td>
 				<td>
+					<%= f.label :twitter_handle, "twitter handle" %>
+					<%= f.text_field :twitter_handle, placeholder:"twitter handle"%>
+				</td>
+
+			</tr>
+			<tr>
+				<td>
 					<%= f.submit "Sign Up", :class => "sign_up_button" %>
 				</td>
 			</tr>
-
-
-
-
 	</table>
 		<div style="clear:both">
 		</div>

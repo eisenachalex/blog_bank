@@ -1,15 +1,27 @@
 <div id="post_scroller">
 	<div id="inner_post">
 		<% @users_with_posts.each do |user| %>
+			<% this_user = user[0] %>
 			<div class="column">
 				<div class="user_tag">
-					<span class="slash">/</span><%= link_to user.username, user_path(user, :guest => "yes") %>
+					<span class="slash">/</span><%= link_to this_user.username, user_path(this_user, :guest => "yes") %>
 				</div>
-				<% user.posts.order('created_at DESC').each do |post| %>
+				<% this_user.posts.order('created_at DESC').each do |post| %>
+						<% @tweets = user[1]['tweets'] %>
+						<% @tweets.each do |tweet| %>
+						<div class="post_preview twitter_post">
+							<img src = <%= user[1]['twitter_photo'] %> </img>
+							<a href=<%= user[1]['url'] %>>@<%= user[1]['twitter_handle']%></a>
+							<%= tweet.text %>
+							<div class="date">
+								<%= tweet.created_at.strftime("%B %d, %Y") %>
+							</div>
+						</div>
+						<%  end %>
 					<div class="post_preview">
 						<div class="content">
 							<div class="title">
-								<%= link_to post.title, user_post_path(user,post) %>
+								<%= link_to post.title, user_post_path(this_user,post) %>
 							</div>
 							<div class="date">
 								<%= post.created_at.strftime("%B %d, %Y") %>

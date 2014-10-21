@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140918001743) do
     t.string   "username"
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "twitter_handle"
     t.string   "address"
     t.string   "password_digest"
     t.datetime "created_at"

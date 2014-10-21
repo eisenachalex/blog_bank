@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 							address:params[:user][:address],
 							firstname:params[:user][:firstname],
 							lastname:params[:user][:lastname],
-							password:params[:user][:password]
+							password:params[:user][:password],
+							twitter_handle:params[:user][:twitter_handle]
 							)
 		@user.save!
 		session[:user_id] = @user.id

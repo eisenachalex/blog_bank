@@ -20,6 +20,27 @@ class PostsController < ApplicationController
 			@photo.post_id = @post.id
 			@photo.save!
 		end
+		if @post.photos.first
+			url = Dragonfly.app.fetch(post.photos.first.image_uid) 
+		else 
+			url = nil;
+		end
+		new_post = {}
+		new_post["type"] = @post
+		new_post["id"] = @post.id
+		new_post["url"] = url
+		new_post["category1"] = @post.category1
+		new_post["category2"] = @post.category2
+		new_post["category3"] = @post.category3
+		new_post["title"] = @post.title
+		new_post["created_at"] = @post.created_at
+		new_post["body"] = @post.body	
+		$users_with_posts.each do |user,posts|
+			if user.id == params[:user_id]
+				posts << new_post
+			end
+			break
+		end	
 		redirect_to user_path(params[:user_id])
 	end
 

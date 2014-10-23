@@ -7,6 +7,7 @@ end
 resources :comments
 
 get '/member_center' => 'users#login'
+get '/' => 'home#index'
 get 'sessions/logout' => 'sessions#destroy', as: :logout
 post 'sessions/new' => 'sessions#new', as: :login
 get '/filter_posts' => 'home#filter_posts'

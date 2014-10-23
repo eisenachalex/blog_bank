@@ -1,30 +1,39 @@
 <div id="post_scroller">
 	<div id="inner_post">
-		
-		<% @users_with_posts.each do |user,posts_array| %>
+		<% @users_with_posts.each do |user, posts| %>
 			<div class="column">
 				<div class="user_tag">
-					<span class="slash">/</span><%= link_to  user.username, user_path(user, :guest => "yes") %>
+					<span class="slash">/</span><%= link_to user.username, user_path(user, :guest => "yes") %>
 				</div>
-				<% posts_array.each do |post| %>
-					<div class="post_preview">
-						<div class="content">
-							<div class="title">
-								<%= link_to post.title, user_post_path(user,post) %>
-							</div>
+				<% posts.each do |post| %>
+					<% if post['type'] == 'tweet' %>
+						<div class="post_preview twitter_post">
+							<img src = <%= post['profile_image'] %> </img>
+							<a href=<%= post['link'] %>>@<%= post['handle']%></a>
+							<%= post['body'][0..200] %>
 							<div class="date">
-								<%= post.created_at.strftime("%B %d, %Y") %>
-							</div>
-							<div class="body">
-								<% if post.photos.first %>
-									<% url = Dragonfly.app.fetch(post.photos.first.image_uid) %>
-									<%= image_tag url.url %>
-								<% else %>
-									<%= post.body[0..200]%>
-								<% end %>
+								<%= post['created_at'] %>
 							</div>
 						</div>
-					</div>
+					<% else%>
+						<div class="post_preview">
+							<div class="content">
+								<div class="title">
+									<%= post['title'] %>
+								</div>
+								<div class="date">
+									<%= post['created_at'] %>
+								</div>
+								<div class="body">
+									<% if post['url'] %>
+										<%= image_tag post['url'] %>
+									<% else %>
+										<%= post['body']%>
+									<% end %>
+								</div>
+							</div>
+						</div>
+					<% end %>
 				<% end %>
 			</div>
 		<% end %>
